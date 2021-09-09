@@ -10,6 +10,5 @@ public class ExampleOne {
         System.out.println("Welocme to ICS 3U - AP");
         System.out.println("Welocme to ICS 3U - AP");
         System.out.println("Welocme to ICS 3U - AP");
-        System.out.println("Welocme to ICS 3U - AP");
     }
 }
