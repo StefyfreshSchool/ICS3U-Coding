@@ -12,7 +12,7 @@ public interface ExampleFour {
         int markThree = 87;
         int average; //declaration with no assignemnt
         average = (markOne + markTwo + markThree)/3;
-        
+
         System.out.println("The average of the marks is: " + average); //join data types with +
         
 
