@@ -11,6 +11,9 @@ public class Student {
   private String name;
   private String studentNumber;
   private int grade;
+  private int totalMarks;
+  private int numMarks;
+  private double average;
 
   /**
    * The method with same name as class is used to instantiate an Object
@@ -21,7 +24,21 @@ public class Student {
     this.name = name;
     this.studentNumber = studentNumber;
     this.grade = grade;
+    this.totalMarks = 0;
+    this.numMarks = 0;
+    this.average = 0;
   }
+
+
+  public Student(String name, String studentNumber) {
+    this.name = name;
+    this.studentNumber = studentNumber;
+    this.grade = 9;
+    this.totalMarks = 0;
+    this.numMarks = 0;
+    this.average = 0;
+  }
+
 
   /**
    * displayName, displayStudentNumber, increaseGrade, displayGrade
@@ -33,10 +50,24 @@ public class Student {
     System.out.println(name);
   }
 
+  public String getName(){
+    return name;
+  }
+
+  //Method overloading - two methods with two signatures
+  public void displayName(String greeting) {
+    System.out.println(greeting + " " +name);
+  }
+
   public void displayStudentNumber() {
     System.out.println(studentNumber);
   }
 
+
+  /**
+   * non-static methods do not have the word
+   * non-static methods/attributes mean the method/attribute belongs to the objecty and not class
+   */
   public void increaseGrade() {
     grade++;
   }
@@ -45,4 +76,23 @@ public class Student {
     System.out.println(grade);
   }
 
+
+  public void displayAverage() {
+    System.out.println(average);
+  }
+
+  public double getAverage(){
+    return average;
+  }
+
+  public void addTest(int mark) {
+    numMarks++;
+    totalMarks += mark;
+    calculateAverage();
+
+  }
+
+  private void calculateAverage() {
+    average = (double) totalMarks / numMarks;
+  }
 }
