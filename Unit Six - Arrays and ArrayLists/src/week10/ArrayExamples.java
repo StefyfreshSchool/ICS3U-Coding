@@ -2,9 +2,25 @@ package week10;
 
 public class ArrayExamples {
     public static void main(String[] args) {
+        iterateAnArray();        
+    }
+
+    private static void iterateAnArray() {
+       int[] arr = {5, 3, 2, 5, 2};
+
+       int sum = 0;
+
+       for (int i = 0; i < arr.length; i++) {
+           sum += arr[i];
+       }
+
+       System.out.println(sum);
+    }
+
+    private static void accessArray() {
         int[] arr = new int[5];
         Animal[] animals = new Animal[3];
-        
+
         // access elements at indexes with [index]
         arr[0] = 3;
         arr[1] = 7;
@@ -18,6 +34,5 @@ public class ArrayExamples {
 
         System.out.println(arr.length);
         System.out.println(animals.length / 2);
-        
     }
 }
